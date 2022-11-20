@@ -225,9 +225,9 @@
 	.hero-text p.subtitle {
 	    font-size: 13px;
 	}
-	.section-title p {
+	/* .section-title p {
 	    max-width: 400px;
-	}
+	} */
 
 	.section-title h3 {
 	    font-size: 25px;
@@ -393,9 +393,9 @@
 	.hero-area div.hero-form {
 		width: auto;
 	}
-	.section-title p {
+	/* .section-title p {
 		max-width: 285px;
-	}
+	} */
 
 	p.testimonial-body {
 		max-width: 285px;
@@ -575,5 +575,20 @@
 	    margin-left: 0;
 	    margin-top: 15px;
 	    display: block;
+	}
+}
+@media only screen and (max-width: 992px) {
+	#winter-fest {
+		color: #fff;
+		display: inline-block;
+		padding: 0.5em 5%;
+		background-color: #40c388;
+		border-radius: 0;
+		margin-top: 0;
+		width: 90%;
+	}
+	#winter-fest:hover {
+		color: #40c388;
+		background-color: #ffffff;
 	}
 }
