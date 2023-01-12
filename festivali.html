@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- nanogallery -->
     <link rel="stylesheet" href="assets/css/nanogallery2.min.css">
+    <!-- responsive-flip-countdown -->
+    <link rel="stylesheet" href="assets/css/responsive-flip-countdown.css">
+
 
 </head>
 <body>
@@ -61,14 +64,16 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li><a href="index.html">Naslovna</a></li>
-								<li><a href="kursevi.html">Kursevi</a></li>
-								<li><a href="instruktori.html">Instruktori</a></li>
-								<li><a href="galerija.html">Galerija</a></li>
-								<li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="index.html">Home</a></li>
+								<li><a href="kursevi.html">Courses</a></li>
+								<li><a href="instruktori.html">Instructors</a></li>
+								<li><a href="galerija.html">Gallery</a></li>
+								<li><a href="kontakt.html">Contact</a></li>
 								<li>
 									<div class="header-icons">
-										<a href="festivali.html" id="winter-fest" style="background-color: #af5fff;color: black;"> Zimski Festival </a>
+										<a href="festivali.html" id="winter-fest" style="background-color: #919191;
+                    color: white;
+                    box-shadow: inset 0 0 2px 2px #626262;"> WINTER CONNECTION FESTIVAL </a>
 									</div>
 								</li>
 							</ul>
@@ -83,70 +88,38 @@
 	<!-- end header -->
 	
 	<!-- breadcrumb-section -->
-	<div class="breadcrumb-section homepage-bg-2-fest">
+	<div class="breadcrumb-section festivals homepage-bg-2-fest">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Događaj godine!</p>
-						<h1>Veliki zimski plesni festival</h1>
-					</div>
+						<p>Event of the year!</p>
+						<h1>WINTER FESTIVAL</h1>
+            <br>
+            <div class="flipper" style="padding-left: 10px;" data-reverse="true" data-datetime="2023-02-24 00:00:00" data-template="dd|HH|ii|ss" data-labels="Days|Hours|Minutes|Seconds" id="myFlipper"></div>
+            <button class="bookpass"> BOOK YOUR PASS NOW </button>
+          </div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- end breadcrumb section -->
+    
+  <div class="lineup" style="min-height: 200px">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
 
-    <div class="countdowntimer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mt-4">
-                    <div class="time-counter">
-                        <div class="time-countdown clearfix" data-countdown="2023/2/24">
-                            <div class="counter-column">
-                                <div class="inner">
-                                    <span class="count">00</span>
-                                    <span class="timer-label">Dana</span>
-                                </div>
-                            </div> 
-                            <div class="counter-column">
-                                <div class="inner">
-                                    <span class="count">00</span>
-                                    <span class="timer-label">Sati</span>
-                                </div>
-                            </div>
-                            <div class="counter-column">
-                                <div class="inner">
-                                    <span class="count">00</span>
-                                    <span class="timer-label">Minuta</span>
-                                </div>
-                            </div>  
-                            <div class="counter-column">
-                                <div class="inner">
-                                    <span class="count">00</span>
-                                    <span class="timer-label">Sekundi</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+      </div>
     </div>
-
-    <div class="main-festival-section mb-150 mt-150">
-        <div class="container">
-            <div class="col-lg-12 text-center text-bold">
-                U pripremi...
-            </div>
-        </div>
-    </div>
+  </div>
 	<!-- copyright -->
 	<div class="copyright">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
-					<p>Copyrights &copy; 2022 - <a href="https://www.facebook.com/profile.php?id=100083504704679">Connection Dance Studio</a>,  Sva prava zadržana.</p>
+					<p>Copyrights &copy; 2022 - <a href="https://www.facebook.com/profile.php?id=100083504704679">Connection Dance Studio</a>,  All rights reserved.</p>
 				</div>
 				<div class="col-lg-6 text-right col-md-12">
 					<div class="social-icons">
@@ -185,6 +158,15 @@
 	<script src="assets/js/main.js"></script>
 	<!-- nanogallery -->
     <script src="assets/js/jquery.nanogallery2.min.js"></script>
+    <!-- flipper-responsive -->
+    <script src="assets/js/jquery.flipper-responsive.js"></script>
+
+    <script>
+        jQuery(function ($) {
+        $('#myFlipper').flipper('init');
+      });
+      </script>
+
 </body>
 
 <style>

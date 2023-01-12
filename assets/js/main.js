@@ -2,6 +2,10 @@
     "use strict";
 
     $(document).ready(function($){
+
+        $( ".bookpass" ).on( "click", function() {
+            window.open("https://www.facebook.com/events/1246948632761549/");
+          });
         
         // testimonial sliders
         $(".testimonial-sliders").owlCarousel({
@@ -53,9 +57,32 @@
             }
         });
 
+        $(".homepage-gallery-carousel").owlCarousel({
+            items: 3,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout:1500,
+            margin: 30,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:false
+                },
+                600:{
+                    items:2,
+                    nav:false
+                },
+                1000:{
+                    items:3,
+                    nav:false,
+                    loop:true
+                }
+            }
+        });
+
         // logo carousel
         $(".logo-carousel-inner").owlCarousel({
-            items: 4,
+            items: 3,
             loop: true,
             autoplay: true,
             margin: 30,
@@ -65,11 +92,11 @@
                     nav:false
                 },
                 600:{
-                    items:3,
+                    items:2,
                     nav:false
                 },
                 1000:{
-                    items:4,
+                    items:3,
                     nav:false,
                     loop:true
                 }
@@ -156,84 +183,7 @@
 
         $(".close-btn").on("click", function() {
             $(".search-area").removeClass("search-active");
-        });
-
-        // jQuery("#nanogallery3").nanogallery2({
-        
-        //     // CONTENT SOURCE
-        //     // The optional add-on nanoPhotosProvider is used for this example - this is not mandatory and can easily be replaced by a list of medias
-        //     items: [
-        //         { src: '../assets/img/test2.jpg', srct: '../assets/img/test2.jpg', title: 'Berlin 1' },
-        //         { src: '../assets/img/test2.jpg', srct: '../assets/img/test2.jpg', title: 'Berlin 2' },
-        //         { src: '../assets/img/test2.jpg', srct: '../assets/img/test2.jpg', title: 'Berlin 3' }
-        //       ],
-        //     album: 'people',
-           
-        //     // GALLERY AND THUMBNAIL LAYOUT
-        //     galleryMosaic : [                       // default layout
-        //       { w: 2, h: 2, c: 1, r: 1 },
-        //       { w: 1, h: 1, c: 3, r: 1 },
-        //       { w: 1, h: 1, c: 3, r: 2 },
-        //       { w: 1, h: 2, c: 4, r: 1 },
-        //       { w: 2, h: 1, c: 5, r: 1 },
-        //       { w: 2, h: 2, c: 5, r: 2 },
-        //       { w: 1, h: 1, c: 4, r: 3 },
-        //       { w: 2, h: 1, c: 2, r: 3 },
-        //       { w: 1, h: 2, c: 1, r: 3 },
-        //       { w: 1, h: 1, c: 2, r: 4 },
-        //       { w: 2, h: 1, c: 3, r: 4 },
-        //       { w: 1, h: 1, c: 5, r: 4 },
-        //       { w: 1, h: 1, c: 6, r: 4 }
-        //     ],
-        //     galleryMosaicXS : [                     // layout for XS width
-        //       { w: 2, h: 2, c: 1, r: 1 },
-        //       { w: 1, h: 1, c: 3, r: 1 },
-        //       { w: 1, h: 1, c: 3, r: 2 },
-        //       { w: 1, h: 2, c: 1, r: 3 },
-        //       { w: 2, h: 1, c: 2, r: 3 },
-        //       { w: 1, h: 1, c: 2, r: 4 },
-        //       { w: 1, h: 1, c: 3, r: 4 }
-        //     ],
-        //     galleryMosaicSM : [                     // layout for SM width
-        //       { w: 2, h: 2, c: 1, r: 1 },
-        //       { w: 1, h: 1, c: 3, r: 1 },
-        //       { w: 1, h: 1, c: 3, r: 2 },
-        //       { w: 1, h: 2, c: 1, r: 3 },
-        //       { w: 2, h: 1, c: 2, r: 3 },
-        //       { w: 1, h: 1, c: 2, r: 4 },
-        //       { w: 1, h: 1, c: 3, r: 4 }
-        //     ],
-        //     galleryMaxRows: 1,
-        //     galleryDisplayMode: 'rows',
-        //     gallerySorting: 'random',
-        //     thumbnailDisplayOrder: 'random',
-        //     thumbnailHeight: '180', thumbnailWidth: '220',
-        //     thumbnailAlignment: 'scaled',
-        //     thumbnailGutterWidth: 0, thumbnailGutterHeight: 0,
-        //     thumbnailBorderHorizontal: 0, thumbnailBorderVertical: 0,
-        //     thumbnailToolbarImage: null,
-        //     thumbnailToolbarAlbum: null,
-        //     thumbnailLabel: { display: false },
-        //     galleryDisplayTransitionDuration: 1500,
-        //     thumbnailDisplayTransition: 'imageSlideUp',
-        //     thumbnailDisplayTransitionDuration: 1200,
-        //     thumbnailDisplayTransitionEasing: 'easeInOutQuint',
-        //     thumbnailDisplayInterval: 60,
-        //     thumbnailBuildInit2: 'image_scale_1.15',
-        //     thumbnailHoverEffect2: 'thumbnail_scale_1.00_1.05_300|image_scale_1.15_1.00',
-        //     touchAnimation: true,
-        //     touchAutoOpenDelay: 500,
-        //     viewerToolbar: { display: false },
-        //     viewerTools:    {
-        //       topLeft:   'label',
-        //       topRight:  'shareButton, rotateLeft, rotateRight, fullscreenButton, closeButton'
-        //     },
-        //     galleryTheme : { 
-        //       thumbnail: { background: '#111' },
-        //     },
-        //     locationHash: true
-        //   });
-    
+        }); 
     });
 
 
@@ -241,5 +191,8 @@
         jQuery(".loader").fadeOut(1000);
     });
 
+    setTimeout(function() {
+        jQuery(".loader2").fadeOut(1000);
+    }, 200)
 
 }(jQuery));
